@@ -16,6 +16,7 @@
 		988510F728572B8900CC2DA9 /* IssueTrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988510F628572B8900CC2DA9 /* IssueTrackerUITests.swift */; };
 		988510F928572B8900CC2DA9 /* IssueTrackerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988510F828572B8900CC2DA9 /* IssueTrackerUITestsLaunchTests.swift */; };
 		98851107285730C800CC2DA9 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 98851106285730C800CC2DA9 /* SnapKit */; };
+		98FF7BA92859A39200BD80B0 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 98FF7BA82859A39200BD80B0 /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				98851107285730C800CC2DA9 /* SnapKit in Frameworks */,
+				98FF7BA92859A39200BD80B0 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,6 +146,7 @@
 			name = IssueTracker;
 			packageProductDependencies = (
 				98851106285730C800CC2DA9 /* SnapKit */,
+				98FF7BA82859A39200BD80B0 /* Alamofire */,
 			);
 			productName = IssueTracker;
 			productReference = 988510D228572B8700CC2DA9 /* IssueTracker.app */;
@@ -219,6 +222,7 @@
 			mainGroup = 988510C928572B8700CC2DA9;
 			packageReferences = (
 				98851105285730C800CC2DA9 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				98FF7BA72859A39200BD80B0 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 988510D328572B8700CC2DA9 /* Products */;
 			projectDirPath = "";
@@ -606,6 +610,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		98FF7BA72859A39200BD80B0 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -613,6 +625,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 98851105285730C800CC2DA9 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		98FF7BA82859A39200BD80B0 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 98FF7BA72859A39200BD80B0 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
