@@ -24,12 +24,20 @@ class ViewController: UIViewController {
     }
     
     private lazy var loginButton: UIButton = {
-        let button = UIButton(type: .custom, primaryAction: UIAction(handler: { _ in
+        
+        var configuration = UIButton.Configuration.gray()
+        var container = AttributeContainer()
+        container.font = UIFont.boldSystemFont(ofSize: 20)
+        configuration.attributedTitle = AttributedString("Github Login", attributes: container)
+        
+        configuration.cornerStyle = .capsule
+        configuration.baseForegroundColor = UIColor.black
+        configuration.buttonSize = .large
+        configuration.image = UIImage(named: "GitHub-Mark")
+        configuration.imagePadding = 8
+        let button = UIButton(configuration: configuration, primaryAction: UIAction(handler: { _ in
             self.requestLogin()
         }))
-        button.setTitle("Github 로그인", for: .normal)
-        button.setTitleColor(.white, for: .normal)
-        button.backgroundColor = .black
         return button
     }()
     
