@@ -1,46 +1,90 @@
-# issue-tracker
+# 💁 프로젝트 소개
 
-![iOS 15.4+](https://img.shields.io/badge/iOS-15.4%2B-lightgrey) ![Xcode 13.3](https://img.shields.io/badge/Xcode-13.3-blue)
+IssueTracker 프로젝트는 GitHub API를 활용한 학습용 연습 프로젝트입니다.
 
-> 기한: 2022.06.13 ~ 07.01 (3주)
-> 프로젝트에 대한 자세한 내용은 [👉 Notion]() 에서 확인
+2022 코드스쿼드 마스터즈 iOS과정의 팀 프로젝트로 [Rosa](https://github.com/Jinsujin)와 함께 시작했으며, 
 
-## 앱 소개
+수료 이후 Open API와의 네트워크 통신과 Coordinator, DIContainer 패턴 연습을 위해 이어서 혼자 개발하게 되었습니다.
 
-[Github API](https://docs.github.com/en/rest/issues/issues) 을 사용해 issue 를 관리할 수 있는 iOS Application을 만들어 보았습니다.
-구현된 기능은 다음과 같습니다:
-- Github OAuth 로그인
-- 사용자의 Repository 목록 보여주기
-- Repository 에 해당하는 issue 목록 보여주기
-- issue 생성하기
+# 📱 주요 화면 및 기능
 
-|                                                                                                                             로그인                                                                                                                             |                                                                                               Repository 목록                                                                                               |
-| :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-|                                                         ![login](https://user-images.githubusercontent.com/12508578/176852816-ffe59c4c-0beb-43ab-8bef-94ddfd6b23db.gif)                                                            |                                           ![Repository목록](https://user-images.githubusercontent.com/12508578/176852931-e5b5f3f5-fab4-4337-96d1-9ea90b11bf58.png)                                           |
-| - Github OAuth 를 이용해 로그인 합니다. <br/>- 로그인을 하면 Github 으로 부터 인증을 하고 받아온 사용자 access token 를 local(UserDefaults) 에 저장해 API 호출에 사용합니다. <br/>- 한번 로그인을 하면 앱 종료 후 다시 실행해도 로그인 상태를 유지합니다. | - 로그인한 사용자의 Repository 목록을 조회하여 화면에 보여줍니다. <br/>- Repository 를 선택하면, 해당 Repository 에 속한 issue 리스트 화면을 보여줍니다. |
+## GitHub OAuth 로그인
+|첫 화면|OAuth 로그인 페이지|리다이렉트|
+|:---|:---|:---|
+|<img src="https://user-images.githubusercontent.com/67407678/204271315-265a5ba3-3f83-484c-b230-0cca69486f73.png" width="200" height="400"/>|<img src="https://user-images.githubusercontent.com/67407678/204271323-ca7f6e51-c5b7-41f7-88c0-3abfe3816d3f.png" width="200" height="400"/>|<img src="https://user-images.githubusercontent.com/67407678/204271331-8d339dbe-c0c0-445d-a6a1-4ff84a3b374a.png" width="200" height="400"/>|
 
-|                                                                                                                             issue 목록                                                                                                                             |                                                                                              issue 만들기                                                                                               |
-| :-------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-|                                                         ![issue 목록](https://user-images.githubusercontent.com/12508578/176856686-1ae0ef62-aa92-4112-81d0-2914db6c0885.png)                                                            |                                           ![issue 만들기](https://user-images.githubusercontent.com/12508578/176856729-cf49bac0-811a-4be7-8399-a695b2a40929.gif)                                           |
-| - Repository 목록에서 Repository 선택시, API 를 통해 목록을 불러와 화면에 보여줍니다. | - 선택한 Repository 에 issue 를 만들 수 있습니다.<br/>- 타이틀과 함께 레이블, 마일스톤, 담당자 정보를 입력해 issue를 생성할 수 있습니다. <br/>- issue 를 생성 완료하면 목록화면으로 돌아갑니다. |
+## GitHub Repository 목록 조회
+|로그인 후 자신의 Repository 목록을 보여줍니다.|
+|---|
+|<img src="https://user-images.githubusercontent.com/67407678/204271336-7ca40419-07a6-4c97-8aaa-a912b87d81ee.png" width="200" height="400"/>|
 
-### 사용한 기술
-
-- [설계](https://github.com/Jinsujin/issue-tracker/wiki/2%EC%A3%BC%EC%B0%A8.-%EC%84%A4%EA%B3%84)
-- [DIContainer](https://github.com/Jinsujin/issue-tracker/wiki/DIContainer-%EC%82%AC%EC%9A%A9%EA%B8%B0)
-- [Coordinator 적용 계획](https://github.com/Jinsujin/issue-tracker/wiki/Coordinator-%EC%A0%81%EC%9A%A9-%EA%B3%84%ED%9A%8D)
-
-### Library
-
-|                        | Version |           |
-| ---------------------- | ------- | --------- |
-| Alamofire           | 5.6.1   | SPM |
-| SnapKit           | 5.6.0   | SPM |
+## GitHub Repository의 Issue 목록 조회
+|선택한 Repository의 Issue 목록을 보여줍니다.|
+|---|
+|<img src="https://user-images.githubusercontent.com/67407678/204271345-128a9cd1-b23c-4ecf-87e9-cd33d1db8e80.png" width="200" height="400"/>|
 
 
-## 팀원
-|`iOS` [@bibi](https://github.com/bibi6666667)| `iOS` [@Rosa](https://github.com/Jinsujin)| 
-|--|--|
-|<img src="https://github.com/bibi6666667.png" width="200" height="200"/>|<img src="https://github.com/Jinsujin.png" width="200" height="200"/>|
-|[👉 회고](https://github.com/Jinsujin/issue-tracker/wiki/%ED%9A%8C%EA%B3%A0%23bibi)|[👉 회고](https://github.com/Jinsujin/issue-tracker/wiki/%ED%9A%8C%EA%B3%A0%23Rosa)|
+## Repository의 새 Issue 생성
+|Repository에 새 Issue를 생성합니다.|'저장' 버튼을 누르면 서버에 요청을 보내고 indicator를 띄웁니다.|생성된 Issue와 함께 Issue 목록을 보여줍니다.|
+|---|---|---|
+|<img src="https://user-images.githubusercontent.com/67407678/204271364-bb518fcc-85b6-4cbf-9002-b34c8bf072bc.png" width="200" height="400"/>|<img src="https://user-images.githubusercontent.com/67407678/204271382-3e184a1b-75e1-446d-9171-45c3730de828.png" width="200" height="400"/>|<img src="https://user-images.githubusercontent.com/67407678/204271396-bd3578f7-04f8-4cc4-a732-fd40e96f68d4.png" width="200" height="400"/>|
 
+
+# 🅰️ Architecture
+
+![https://user-images.githubusercontent.com/67407678/204296762-06f74e3e-b428-4e7a-8477-043a4dc05112.png](https://user-images.githubusercontent.com/67407678/204296762-06f74e3e-b428-4e7a-8477-043a4dc05112.png)
+
+- `Coordinator` : `Child Coordinator`들을 관리하고 화면을 전환합니다. (부모 코디네이터)
+    - `DIContainer` : 생성된 주요 객체들을 관리합니다.
+    - `child coordinators` : 현재 사용 중인 자식 코디네이터들을 관리합니다.
+- `Child Coordinator` : `ViewController`의 생성과 흐름을 관리합니다.
+- `ViewController` (View) : 화면을 그립니다.
+    - `Model` (ViewModel) : 화면을 그리는 데 필요한 데이터와 로직을 관리합니다.
+        - `Environment`: 모델이 필요로 하는 Service의 특정 메서드를 클로저로 주입합니다.
+- `Service` : 네트워크 요청을 담당합니다.
+- `Entity` : 로직이 없는 가장 작은 모델의 단위입니다.
+
+# 🔲 Class Diagram
+
+![https://user-images.githubusercontent.com/67407678/204296895-b89c359d-185f-4beb-a623-94d0a5cb7d9b.png](https://user-images.githubusercontent.com/67407678/204296895-b89c359d-185f-4beb-a623-94d0a5cb7d9b.png)
+
+# ➡️ Sequence Diagram
+
+아래 링크를 클릭하면 wiki 문서로 이동합니다.
+
+[🐭[bibi refactor] Sequence Diagram · Jinsujin/issue-tracker Wiki](https://github.com/Jinsujin/issue-tracker/wiki/%F0%9F%90%AD%5Bbibi-refactor%5D-Sequence-Diagram)
+
+# 📝 학습 노트
+
+- [(wiki) Coordinator 이해하고 적용하기](https://github.com/Jinsujin/issue-tracker/wiki/%F0%9F%90%AD%5Bbibi-refactor%5D-Coordinator-%ED%8C%A8%ED%84%B4-%EC%9D%B4%ED%95%B4-%EB%B0%8F-%EA%B5%AC%ED%98%84%ED%95%98%EA%B8%B0)
+- [(wiki) DIContainer : 의존성 주입을 위한 객체 관리하기](https://github.com/Jinsujin/issue-tracker/wiki/%F0%9F%90%AD%5Bbibi-refactor%5D-DIContainer-:-%EC%9D%98%EC%A1%B4%EC%84%B1-%EC%A3%BC%EC%9E%85%EC%9D%84-%EC%9C%84%ED%95%9C-%EA%B0%9D%EC%B2%B4-%EA%B4%80%EB%A6%AC%ED%95%98%EA%B8%B0)
+- [(wiki) Environment 적용하기](https://github.com/Jinsujin/issue-tracker/wiki/%F0%9F%90%AD%5Bbibi-refactor%5D-Environment-%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0)
+- [(wiki) 지연시간 두고 코드 실행하기 - Timer, asyncAfter](https://github.com/Jinsujin/issue-tracker/wiki/%F0%9F%90%AD%5Bbibi-refactor%5D-%EC%A7%80%EC%97%B0%EC%8B%9C%EA%B0%84-%EB%91%90%EA%B3%A0-%EC%BD%94%EB%93%9C-(%EB%B0%98%EB%B3%B5)-%EC%8B%A4%ED%96%89%ED%95%98%EA%B8%B0---Timer,-DispatchQueue.main.asyncAfter)
+
+# 🐛 디버깅 노트
+
+[이곳의 노션 문서](https://www.notion.so/IssueTracker-c2f2380c3e864717ba151d4d68038cd1)에 정리되어 있습니다.
+
+
+
+# 🗓 Timeline
+
+- 220613 ~ 220701 : 코드스쿼드 마스터즈 2022 iOS 팀 프로젝트 - IssueTracker by 로사 & 비비
+    - GitHub API 분석
+    - GitHub OAuth 로그인
+    - Repostiory 목록 가져오기
+    - Issue 목록 가져오기
+    - Issue 생성하기
+    - Container 역할의 클래스 만들기
+- 22.07 ~ 22.09 : 기존 프로젝트 개선 및 리팩토링 by 비비
+    - 디자인 패턴 적용
+        - Environment
+        - DIContainer
+        - Coordinator
+    - 디버깅 작업 (디버깅 노트)
+    - 리팩토링 작업
+- 22.10 ~ 22.11 : 프로젝트 마무리, 학습 내용 정리 및 문서화 작업
+    - 마지막 PR 보내기
+    - 학습내용 정리
+    - [README.md](http://README.md) 작성
+    - Wiki 작성
