@@ -86,5 +86,5 @@ IssueTracker 프로젝트는 GitHub API를 활용한 학습용 연습 프로젝�
 - 22.10 ~ 22.11 : 프로젝트 마무리, 학습 내용 정리 및 문서화 작업
     - 마지막 PR 보내기
     - 학습내용 정리
-    - [README.md](http://README.md) 작성
+    - README.md 작성
     - Wiki 작성
