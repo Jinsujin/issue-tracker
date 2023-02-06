@@ -1,11 +1,13 @@
 # issue-tracker
+
 > `그룹 프로젝트#5`
 >
 > 기한: 2022.06.13 ~ 07.01 (3주)
 >
-> 프로젝트에 대한 자세한 내용은 [👉 Notion]() 에서 확인
+> 프로젝트에 대한 자세한 내용은 [👉 Notion](https://cookie-giant-a00.notion.site/CodeSquad-team11-with-bibi-ec7112583f884e99a1d6807e1d8c660e) 에서 확인
 
 ![iOS 15.4+](https://img.shields.io/badge/iOS-13.0%2B-lightgrey) ![Xcode 13.3](https://img.shields.io/badge/Xcode-13.3-blue)
+
 
 ## 앱 소개
 
@@ -47,4 +49,3 @@
 |--|--|
 |<img src="https://github.com/bibi6666667.png" width="200" height="200"/>|<img src="https://github.com/Jinsujin.png" width="200" height="200"/>|
 |[👉 회고](https://github.com/Jinsujin/issue-tracker/wiki/%ED%9A%8C%EA%B3%A0%23bibi)|[👉 회고](https://github.com/Jinsujin/issue-tracker/wiki/%ED%9A%8C%EA%B3%A0%23Rosa)|
-
